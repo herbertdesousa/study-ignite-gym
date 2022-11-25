@@ -1,11 +1,11 @@
 import { Button as NativeBaseButton, IButtonProps, Text } from 'native-base';
 
 type Props = IButtonProps & {
-  title: string;
   variant?: 'solid' | 'outline';
+  children?: React.ReactNode;
 };
 
-export function Button({ title, variant = 'solid', ...props }: Props) {
+export function Button({ variant = 'solid', children, ...props }: Props) {
   return (
     <NativeBaseButton
       w="full"
@@ -24,7 +24,7 @@ export function Button({ title, variant = 'solid', ...props }: Props) {
         fontFamily="heading"
         fontSize="sm"
       >
-        {title}
+        {children}
       </Text>
     </NativeBaseButton>
   );

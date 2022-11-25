@@ -87,7 +87,7 @@ export function Exercise() {
               </NativeBase.HStack>
             </NativeBase.HStack>
 
-            <Button title="Marcar como realizado" />
+            <Button>Marcar como realizado</Button>
           </NativeBase.Box>
         </NativeBase.VStack>
       </NativeBase.ScrollView>

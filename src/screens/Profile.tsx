@@ -67,7 +67,7 @@ export function Profile() {
             secureTextEntry
           />
 
-          <Button title="Atualizar" mt={4} />
+          <Button mt={4}>Atualizar</Button>
         </NativeBase.Center>
       </NativeBase.ScrollView>
     </NativeBase.VStack>

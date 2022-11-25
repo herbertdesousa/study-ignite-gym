@@ -53,7 +53,7 @@ export function SignIn() {
             autoCapitalize="none"
           />
           <Input placeholder="Senha" secureTextEntry />
-          <Button title="Acessar" />
+          <Button>Acessar</Button>
         </NativeBase.Center>
 
         <NativeBase.Center mt={24}>
@@ -65,11 +65,9 @@ export function SignIn() {
           >
             Ainda não tem acesso
           </NativeBase.Text>
-          <Button
-            title="Criar Conta"
-            variant="outline"
-            onPress={handleNewAccount}
-          />
+          <Button variant="outline" onPress={handleNewAccount}>
+            Criar Conta
+          </Button>
         </NativeBase.Center>
       </NativeBase.VStack>
     </NativeBase.ScrollView>

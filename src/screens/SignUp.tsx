@@ -53,15 +53,12 @@ export function SignUp() {
             autoCapitalize="none"
           />
           <Input placeholder="Senha" secureTextEntry />
-          <Button title="Acessar" />
+          <Button>Acessar</Button>
         </NativeBase.Center>
 
-        <Button
-          title="Voltar para o login"
-          variant="outline"
-          mt={24}
-          onPress={handleGoBack}
-        />
+        <Button variant="outline" mt={24} onPress={handleGoBack}>
+          Voltar para o login
+        </Button>
       </NativeBase.VStack>
     </NativeBase.ScrollView>
   );
