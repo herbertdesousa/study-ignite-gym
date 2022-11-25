@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { AppNavigatorRoutesProps } from '@routes/app.routes';
-import { FlatList, Heading, HStack, Text, VStack } from 'native-base';
+import * as NativeBase from 'native-base';
 
 import { HomeGroup, HomeExerciseCard, HomeHeader } from '@components/home';
 
@@ -27,10 +27,10 @@ export function Home() {
   }
 
   return (
-    <VStack flex={1}>
+    <NativeBase.VStack flex={1}>
       <HomeHeader />
 
-      <FlatList
+      <NativeBase.FlatList
         data={groups}
         keyExtractor={item => item}
         renderItem={({ item }) => (
@@ -52,18 +52,18 @@ export function Home() {
         minH={10}
       />
 
-      <VStack px={8}>
-        <HStack justifyContent="space-between" mb={5}>
-          <Heading color="gray.200" fontSize="md">
+      <NativeBase.VStack px={8}>
+        <NativeBase.HStack justifyContent="space-between" mb={5}>
+          <NativeBase.Heading color="gray.200" fontSize="md">
             Exercícios
-          </Heading>
+          </NativeBase.Heading>
 
-          <Text color="gray.200" fontSize="sm">
+          <NativeBase.Text color="gray.200" fontSize="sm">
             {exercises.length}
-          </Text>
-        </HStack>
+          </NativeBase.Text>
+        </NativeBase.HStack>
 
-        <FlatList
+        <NativeBase.FlatList
           data={exercises}
           keyExtractor={item => item}
           renderItem={({ item }) => (
@@ -74,7 +74,7 @@ export function Home() {
             paddingBottom: 20,
           }}
         />
-      </VStack>
-    </VStack>
+      </NativeBase.VStack>
+    </NativeBase.VStack>
   );
 }

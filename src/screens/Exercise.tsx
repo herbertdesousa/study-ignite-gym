@@ -1,14 +1,5 @@
 import { TouchableOpacity } from 'react-native';
-import {
-  Box,
-  Heading,
-  HStack,
-  Icon,
-  Image,
-  ScrollView,
-  Text,
-  VStack,
-} from 'native-base';
+import * as NativeBase from 'native-base';
 import React from 'react';
 
 import { Feather } from '@expo/vector-icons';
@@ -30,34 +21,39 @@ export function Exercise() {
   }
 
   return (
-    <VStack flex={1}>
-      <VStack px={8} bg="gray.600" pt={12}>
+    <NativeBase.VStack flex={1}>
+      <NativeBase.VStack px={8} bg="gray.600" pt={12}>
         <TouchableOpacity onPress={handleGoBack}>
-          <Icon as={Feather} name="arrow-left" color="green.500" size={6} />
+          <NativeBase.Icon
+            as={Feather}
+            name="arrow-left"
+            color="green.500"
+            size={6}
+          />
         </TouchableOpacity>
 
-        <HStack
+        <NativeBase.HStack
           justifyContent="space-between"
           mt={4}
           mb={8}
           alignItems="center"
         >
-          <Heading color="gray.100" fontSize="lg" flexShrink={1}>
+          <NativeBase.Heading color="gray.100" fontSize="lg" flexShrink={1}>
             Puxada frontal
-          </Heading>
+          </NativeBase.Heading>
 
-          <HStack alignItems="center">
+          <NativeBase.HStack alignItems="center">
             <BodySvg />
 
-            <Text color="gray.200" ml={1} textTransform="capitalize">
+            <NativeBase.Text color="gray.200" ml={1} textTransform="capitalize">
               Costas
-            </Text>
-          </HStack>
-        </HStack>
-      </VStack>
-      <ScrollView>
-        <VStack p={8}>
-          <Image
+            </NativeBase.Text>
+          </NativeBase.HStack>
+        </NativeBase.HStack>
+      </NativeBase.VStack>
+      <NativeBase.ScrollView>
+        <NativeBase.VStack p={8}>
+          <NativeBase.Image
             w="full"
             h={80}
             source={{
@@ -69,32 +65,32 @@ export function Exercise() {
             rounded="lg"
           />
 
-          <Box bg="gray.600" rounded="md" pb={4} px={4}>
-            <HStack
+          <NativeBase.Box bg="gray.600" rounded="md" pb={4} px={4}>
+            <NativeBase.HStack
               alignItems="center"
               justifyContent="space-around"
               mb={6}
               mt={5}
             >
-              <HStack>
+              <NativeBase.HStack>
                 <SeriesSvg />
-                <Text color="gray.200" ml="2">
+                <NativeBase.Text color="gray.200" ml="2">
                   3 séries
-                </Text>
-              </HStack>
+                </NativeBase.Text>
+              </NativeBase.HStack>
 
-              <HStack>
+              <NativeBase.HStack>
                 <RepetitionsSvg />
-                <Text color="gray.200" ml="2">
+                <NativeBase.Text color="gray.200" ml="2">
                   12 repetições
-                </Text>
-              </HStack>
-            </HStack>
+                </NativeBase.Text>
+              </NativeBase.HStack>
+            </NativeBase.HStack>
 
             <Button title="Marcar como realizado" />
-          </Box>
-        </VStack>
-      </ScrollView>
-    </VStack>
+          </NativeBase.Box>
+        </NativeBase.VStack>
+      </NativeBase.ScrollView>
+    </NativeBase.VStack>
   );
 }

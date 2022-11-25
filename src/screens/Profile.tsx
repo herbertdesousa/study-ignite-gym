@@ -1,14 +1,6 @@
 import { useState } from 'react';
 import { TouchableOpacity } from 'react-native';
-import {
-  Center,
-  ScrollView,
-  VStack,
-  Skeleton,
-  Text,
-  Heading,
-  useTheme,
-} from 'native-base';
+import * as NativeBase from 'native-base';
 
 import { ScreenHeader, UserPhoto, Input, Button } from '@components/index';
 
@@ -18,13 +10,13 @@ export function Profile() {
   const [photoIsLoading, setPhotoIsLoading] = useState(false);
 
   return (
-    <VStack flex={1}>
+    <NativeBase.VStack flex={1}>
       <ScreenHeader title="Perfil" />
 
-      <ScrollView contentContainerStyle={{ paddingBottom: 36 }}>
-        <Center mt={6} px={10}>
+      <NativeBase.ScrollView contentContainerStyle={{ paddingBottom: 36 }}>
+        <NativeBase.Center mt={6} px={10}>
           {photoIsLoading ? (
-            <Skeleton
+            <NativeBase.Skeleton
               w={PHOTO_SIZE}
               h={PHOTO_SIZE}
               rounded="full"
@@ -40,7 +32,7 @@ export function Profile() {
           )}
 
           <TouchableOpacity>
-            <Text
+            <NativeBase.Text
               color="green.500"
               fontWeight="bold"
               fontSize="md"
@@ -48,14 +40,14 @@ export function Profile() {
               mb={8}
             >
               Alterar Foto
-            </Text>
+            </NativeBase.Text>
           </TouchableOpacity>
 
           <Input bg="gray.600" placeholder="Nome" />
 
           <Input bg="gray.600" placeholder="E-mail" isDisabled />
 
-          <Heading
+          <NativeBase.Heading
             color="gray.200"
             fontSize="md"
             mb={2}
@@ -63,7 +55,7 @@ export function Profile() {
             mt={12}
           >
             Alterar senha
-          </Heading>
+          </NativeBase.Heading>
 
           <Input bg="gray.600" placeholder="Senha antiga" secureTextEntry />
 
@@ -76,8 +68,8 @@ export function Profile() {
           />
 
           <Button title="Atualizar" mt={4} />
-        </Center>
-      </ScrollView>
-    </VStack>
+        </NativeBase.Center>
+      </NativeBase.ScrollView>
+    </NativeBase.VStack>
   );
 }
