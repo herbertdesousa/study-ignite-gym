@@ -20,7 +20,7 @@ import BodySvg from '@assets/icons/body.svg';
 import SeriesSvg from '@assets/icons/series.svg';
 import RepetitionsSvg from '@assets/icons/repetitions.svg';
 
-import { Button } from '@components/Button';
+import { Button } from '@components/index';
 
 export function Exercise() {
   const navigation = useNavigation<AppNavigatorRoutesProps>();

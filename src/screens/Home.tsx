@@ -3,9 +3,7 @@ import { useNavigation } from '@react-navigation/native';
 import { AppNavigatorRoutesProps } from '@routes/app.routes';
 import { FlatList, Heading, HStack, Text, VStack } from 'native-base';
 
-import { HomeGroup } from '@components/home/HomeGroup';
-import { HomeHeader } from '@components/home/HomeHeader';
-import { HomeExerciseCard } from '@components/home/HomeExerciseCard';
+import { HomeGroup, HomeExerciseCard, HomeHeader } from '@components/home';
 
 export function Home() {
   const [groups, setGroups] = useState([
