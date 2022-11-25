@@ -2,10 +2,10 @@ import * as NativeBase from 'native-base';
 
 import { useNavigation } from '@react-navigation/native';
 
-import LogoSvg from '@assets/icons/logo.svg';
-import BackgroundImg from '@assets/images/background.png';
+import LogoSvg from '@/assets/icons/logo.svg';
+import BackgroundImg from '@/assets/images/background.png';
 
-import { Input, Button } from '@components/index';
+import { Input, Button } from '@/components/index';
 
 export function SignUp() {
   const navigation = useNavigation();

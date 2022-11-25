@@ -1,12 +1,12 @@
 import * as NativeBase from 'native-base';
 
 import { useNavigation } from '@react-navigation/native';
-import { AuthNavigatorRoutesProps } from '@routes/auth.routes';
+import { AuthNavigatorRoutesProps } from '@/routes/auth.routes';
 
-import LogoSvg from '@assets/icons/logo.svg';
-import BackgroundImg from '@assets/images/background.png';
+import LogoSvg from '@/assets/icons/logo.svg';
+import BackgroundImg from '@/assets/images/background.png';
 
-import { Input, Button } from '@components/index';
+import { Input, Button } from '@/components/index';
 
 export function SignIn() {
   const navigation = useNavigation<AuthNavigatorRoutesProps>();

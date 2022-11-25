@@ -5,14 +5,14 @@ import {
   BottomTabNavigationProp,
 } from '@react-navigation/bottom-tabs';
 
-import HomeSvg from '@assets/icons/home.svg';
-import HistorySvg from '@assets/icons/history.svg';
-import ProfileSvg from '@assets/icons/profile.svg';
+import HomeSvg from '@/assets/icons/home.svg';
+import HistorySvg from '@/assets/icons/history.svg';
+import ProfileSvg from '@/assets/icons/profile.svg';
 
-import { Home } from '@screens/Home';
-import { Exercise } from '@screens/Exercise';
-import { History } from '@screens/History';
-import { Profile } from '@screens/Profile';
+import { Home } from '@/screens/Home';
+import { Exercise } from '@/screens/Exercise';
+import { History } from '@/screens/History';
+import { Profile } from '@/screens/Profile';
 
 type AppRoutes = {
   home: undefined;

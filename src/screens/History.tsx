@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import * as NativeBase from 'native-base';
 
-import { HistoryCard } from '@components/history/HistoryCard';
-import { ScreenHeader } from '@components/index';
+import { HistoryCard } from '@/components/history/HistoryCard';
+import { ScreenHeader } from '@/components/index';
 
 export function History() {
   const [exercises, setExercises] = useState([

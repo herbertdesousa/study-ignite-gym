@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { TouchableOpacity } from 'react-native';
 import * as NativeBase from 'native-base';
 
-import { ScreenHeader, UserPhoto, Input, Button } from '@components/index';
+import { ScreenHeader, UserPhoto, Input, Button } from '@/components/index';
 
 const PHOTO_SIZE = 33;
 

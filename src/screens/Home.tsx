@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { AppNavigatorRoutesProps } from '@routes/app.routes';
+import { AppNavigatorRoutesProps } from '@/routes/app.routes';
 import * as NativeBase from 'native-base';
 
-import { HomeGroup, HomeExerciseCard, HomeHeader } from '@components/home';
+import { HomeGroup, HomeExerciseCard, HomeHeader } from '@/components/home';
 
 export function Home() {
   const [groups, setGroups] = useState([
