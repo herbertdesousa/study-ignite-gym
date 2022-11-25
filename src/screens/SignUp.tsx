@@ -1,6 +1,9 @@
+import { useContext } from 'react';
 import * as NativeBase from 'native-base';
 
 import { useNavigation } from '@react-navigation/native';
+
+import { AuthContext } from '@/hooks/auth';
 
 import LogoSvg from '@/assets/icons/logo.svg';
 import BackgroundImg from '@/assets/images/background.png';
@@ -8,10 +11,15 @@ import BackgroundImg from '@/assets/images/background.png';
 import { Input, Button } from '@/components/index';
 
 export function SignUp() {
+  const { authed } = useContext(AuthContext);
   const navigation = useNavigation();
 
   function handleGoBack() {
     navigation.goBack();
+  }
+
+  function handleSubmit() {
+    authed.set(true);
   }
 
   return (
@@ -53,7 +61,7 @@ export function SignUp() {
             autoCapitalize="none"
           />
           <Input placeholder="Senha" secureTextEntry />
-          <Button>Acessar</Button>
+          <Button onPress={handleSubmit}>Acessar</Button>
         </NativeBase.Center>
 
         <Button variant="outline" mt={24} onPress={handleGoBack}>

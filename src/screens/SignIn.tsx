@@ -1,7 +1,10 @@
+import { useContext } from 'react';
 import * as NativeBase from 'native-base';
 
 import { useNavigation } from '@react-navigation/native';
 import { AuthNavigatorRoutesProps } from '@/routes/auth.routes';
+
+import { AuthContext } from '@/hooks/auth';
 
 import LogoSvg from '@/assets/icons/logo.svg';
 import BackgroundImg from '@/assets/images/background.png';
@@ -9,10 +12,15 @@ import BackgroundImg from '@/assets/images/background.png';
 import { Input, Button } from '@/components/index';
 
 export function SignIn() {
+  const { authed } = useContext(AuthContext);
   const navigation = useNavigation<AuthNavigatorRoutesProps>();
 
   function handleNewAccount() {
     navigation.push('signUp');
+  }
+
+  function handleSubmit() {
+    authed.set(true);
   }
 
   return (
@@ -53,7 +61,7 @@ export function SignIn() {
             autoCapitalize="none"
           />
           <Input placeholder="Senha" secureTextEntry />
-          <Button>Acessar</Button>
+          <Button onPress={handleSubmit}>Acessar</Button>
         </NativeBase.Center>
 
         <NativeBase.Center mt={24}>
