@@ -8,28 +8,39 @@ import { HomeHeader } from '@components/HomeHeader';
 import { ExerciseCard } from '@components/ExerciseCard';
 
 export function Home() {
-
-  const [groups, setGroups] = useState(['Costas', 'Bíceps', 'Tríceps', 'ombro']);
-  const [exercises, setExercises] = useState(['Puxada frontal', 'Remada curvada', 'Remada unilateral', 'Levantamento terras']);
+  const [groups, setGroups] = useState([
+    'Costas',
+    'Bíceps',
+    'Tríceps',
+    'ombro',
+  ]);
+  const [exercises, setExercises] = useState([
+    'Puxada frontal',
+    'Remada curvada',
+    'Remada unilateral',
+    'Levantamento terras',
+  ]);
   const [groupSelected, setGroupSelected] = useState('Costas');
 
   const navigation = useNavigation<AppNavigatorRoutesProps>();
 
   function handleOpenExerciseDetails() {
     navigation.navigate('exercise');
-  };
+  }
 
   return (
     <VStack flex={1}>
       <HomeHeader />
 
-      <FlatList 
+      <FlatList
         data={groups}
         keyExtractor={item => item}
         renderItem={({ item }) => (
-          <Group 
+          <Group
             name={item}
-            isActive={groupSelected.toLocaleUpperCase() === item.toLocaleUpperCase()}
+            isActive={
+              groupSelected.toLocaleUpperCase() === item.toLocaleUpperCase()
+            }
             onPress={() => setGroupSelected(item)}
           />
         )}
@@ -54,18 +65,17 @@ export function Home() {
           </Text>
         </HStack>
 
-        <FlatList 
+        <FlatList
           data={exercises}
           keyExtractor={item => item}
           renderItem={({ item }) => (
-            <ExerciseCard onPress={handleOpenExerciseDetails}/>
+            <ExerciseCard onPress={handleOpenExerciseDetails} />
           )}
           showsVerticalScrollIndicator={false}
           _contentContainerStyle={{
-            paddingBottom: 20
+            paddingBottom: 20,
           }}
         />
-
       </VStack>
     </VStack>
   );

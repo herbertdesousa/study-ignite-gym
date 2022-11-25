@@ -15,9 +15,9 @@ export function Input({ ...props }: IInputProps) {
       _focus={{
         bg: 'gray.700',
         borderWidth: 1,
-        borderColor: 'green.500'
+        borderColor: 'green.500',
       }}
       {...props}
     />
   );
-};
+}

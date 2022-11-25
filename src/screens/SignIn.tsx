@@ -11,7 +11,7 @@ import { Button } from '@components/Button';
 
 export function SignIn() {
   const navigation = useNavigation<AuthNavigatorRoutesProps>();
-  
+
   function handleNewAccount() {
     navigation.push('signUp');
   }
@@ -39,7 +39,12 @@ export function SignIn() {
         </NativeBase.Center>
 
         <NativeBase.Center>
-          <NativeBase.Heading color="gray.100" fontSize="xl" mb={6} fontFamily="heading">
+          <NativeBase.Heading
+            color="gray.100"
+            fontSize="xl"
+            mb={6}
+            fontFamily="heading"
+          >
             Acesse sua conta
           </NativeBase.Heading>
 
@@ -48,15 +53,17 @@ export function SignIn() {
             keyboardType="email-address"
             autoCapitalize="none"
           />
-          <Input
-            placeholder="Senha"
-            secureTextEntry
-          />
+          <Input placeholder="Senha" secureTextEntry />
           <Button title="Acessar" />
         </NativeBase.Center>
 
         <NativeBase.Center mt={24}>
-          <NativeBase.Text color="gray.100" fontSize="sm" mb={3} fontFamily="body">
+          <NativeBase.Text
+            color="gray.100"
+            fontSize="sm"
+            mb={3}
+            fontFamily="body"
+          >
             Ainda não tem acesso
           </NativeBase.Text>
           <Button
@@ -68,4 +75,4 @@ export function SignIn() {
       </NativeBase.VStack>
     </NativeBase.ScrollView>
   );
-};
+}

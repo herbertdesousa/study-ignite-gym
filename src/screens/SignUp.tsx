@@ -10,7 +10,7 @@ import { Button } from '@components/Button';
 
 export function SignUp() {
   const navigation = useNavigation();
-  
+
   function handleGoBack() {
     navigation.goBack();
   }
@@ -38,22 +38,22 @@ export function SignUp() {
         </NativeBase.Center>
 
         <NativeBase.Center>
-          <NativeBase.Heading color="gray.100" fontSize="xl" mb={6} fontFamily="heading">
+          <NativeBase.Heading
+            color="gray.100"
+            fontSize="xl"
+            mb={6}
+            fontFamily="heading"
+          >
             Crie sua conta
           </NativeBase.Heading>
 
-          <Input
-            placeholder="Nome"
-          />
+          <Input placeholder="Nome" />
           <Input
             placeholder="E-mail"
             keyboardType="email-address"
             autoCapitalize="none"
           />
-          <Input
-            placeholder="Senha"
-            secureTextEntry
-          />
+          <Input placeholder="Senha" secureTextEntry />
           <Button title="Acessar" />
         </NativeBase.Center>
 
@@ -66,4 +66,4 @@ export function SignUp() {
       </NativeBase.VStack>
     </NativeBase.ScrollView>
   );
-};
+}

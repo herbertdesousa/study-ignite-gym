@@ -2,7 +2,7 @@ import { Image, IImageProps } from 'native-base';
 
 type Props = IImageProps & {
   size: number;
-}
+};
 
 export function UserPhoto({ size, ...props }: Props) {
   return (
@@ -14,5 +14,5 @@ export function UserPhoto({ size, ...props }: Props) {
       borderColor="gray.400"
       {...props}
     />
-  )
+  );
 }

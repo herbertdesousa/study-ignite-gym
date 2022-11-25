@@ -6,4 +6,4 @@ export function Loading() {
       <Spinner size="lg" color="green.500" />
     </Center>
   );
-};
+}

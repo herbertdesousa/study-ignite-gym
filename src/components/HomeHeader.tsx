@@ -32,5 +32,5 @@ export function HomeHeader() {
         />
       </TouchableOpacity>
     </NativeBase.HStack>
-  )
+  );
 }

@@ -2,7 +2,7 @@ import { Center, Heading } from 'native-base';
 
 type Props = {
   title: string;
-}
+};
 
 export function ScreenHeader({ title }: Props) {
   return (
