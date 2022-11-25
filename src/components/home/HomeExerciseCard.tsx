@@ -5,7 +5,7 @@ import { Entypo } from '@expo/vector-icons';
 
 type Props = TouchableOpacityProps & {};
 
-export function ExerciseCard({ ...rest }: Props) {
+export function HomeExerciseCard({ ...rest }: Props) {
   return (
     <TouchableOpacity {...rest}>
       <HStack

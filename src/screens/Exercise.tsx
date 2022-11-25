@@ -9,16 +9,18 @@ import {
   Text,
   VStack,
 } from 'native-base';
+import React from 'react';
+
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 import { AppNavigatorRoutesProps } from '@routes/app.routes';
 
-import BodySvg from '@assets/body.svg';
-import SeriesSvg from '@assets/series.svg';
-import RepetitionsSvg from '@assets/repetitions.svg';
+import BodySvg from '@assets/icons/body.svg';
+import SeriesSvg from '@assets/icons/series.svg';
+import RepetitionsSvg from '@assets/icons/repetitions.svg';
+
 import { Button } from '@components/Button';
-import React from 'react';
 
 export function Exercise() {
   const navigation = useNavigation<AppNavigatorRoutesProps>();

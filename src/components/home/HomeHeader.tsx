@@ -1,7 +1,7 @@
 import * as NativeBase from 'native-base';
 import { MaterialIcons } from '@expo/vector-icons';
 
-import { UserPhoto } from './UserPhoto';
+import { UserPhoto } from '../UserPhoto';
 import { TouchableOpacity } from 'react-native';
 
 export function HomeHeader() {

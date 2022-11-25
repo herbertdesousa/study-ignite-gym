@@ -5,7 +5,7 @@ type Props = IPressableProps & {
   isActive: boolean;
 };
 
-export function Group({ name, isActive, ...rest }: Props) {
+export function HomeGroup({ name, isActive, ...rest }: Props) {
   return (
     <Pressable
       mr={3}

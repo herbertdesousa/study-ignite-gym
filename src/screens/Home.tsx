@@ -3,9 +3,9 @@ import { useNavigation } from '@react-navigation/native';
 import { AppNavigatorRoutesProps } from '@routes/app.routes';
 import { FlatList, Heading, HStack, Text, VStack } from 'native-base';
 
-import { Group } from '@components/Group';
-import { HomeHeader } from '@components/HomeHeader';
-import { ExerciseCard } from '@components/ExerciseCard';
+import { HomeGroup } from '@components/home/HomeGroup';
+import { HomeHeader } from '@components/home/HomeHeader';
+import { HomeExerciseCard } from '@components/home/HomeExerciseCard';
 
 export function Home() {
   const [groups, setGroups] = useState([
@@ -36,7 +36,7 @@ export function Home() {
         data={groups}
         keyExtractor={item => item}
         renderItem={({ item }) => (
-          <Group
+          <HomeGroup
             name={item}
             isActive={
               groupSelected.toLocaleUpperCase() === item.toLocaleUpperCase()
@@ -69,7 +69,7 @@ export function Home() {
           data={exercises}
           keyExtractor={item => item}
           renderItem={({ item }) => (
-            <ExerciseCard onPress={handleOpenExerciseDetails} />
+            <HomeExerciseCard onPress={handleOpenExerciseDetails} />
           )}
           showsVerticalScrollIndicator={false}
           _contentContainerStyle={{
